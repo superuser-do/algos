@@ -4,9 +4,13 @@
    <Group
       location = "container:"
       name = "Linked List">
-      <FileRef
-         location = "group:AppendElement.playground">
-      </FileRef>
+      <Group
+         location = "container:"
+         name = "Append Element">
+         <FileRef
+            location = "group:Linked List/Append Element/AppendElement.playground">
+         </FileRef>
+      </Group>
    </Group>
    <FileRef
       location = "group:../AlgoHelpers">
