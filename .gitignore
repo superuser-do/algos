@@ -118,3 +118,5 @@ fastlane/test_output
 iOSInjectionProject/
 *.xcuserstate
 .DS_Store
+algos.xcworkspace/xcuserdata/ken.xcuserdatad/xcschemes/xcschememanagement.plist
+algos.xcworkspace/contents.xcworkspacedata
