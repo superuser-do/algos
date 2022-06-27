@@ -1,17 +1,38 @@
 import AlgoHelpers
 
-func append(head: ListNode<Int>?, target: Int) -> ListNode<Int> {
-    guard let head = head else {
-        return ListNode(target)
+
+func append(head: ListNode<Int>?, target: Int, _ type: ExecutionType) -> ListNode<Int> {
+    switch type {
+    case .iterative:
+        guard let head = head else {
+            return ListNode(target)
+        }
+        var current = head
+        
+        while current.next != nil {
+            current = current.next!
+        }
+        
+        current.next = ListNode(target)
+        
+        return head
+        
+    case .recursive:
+        let current = head
+        
+        guard let current = current else {
+            return ListNode(target)
+        }
+        
+        current.next = append(head: current.next, target: target, .recursive)
+        
+        return current
     }
-    var current = head
-    
-    while current.next != nil {
-        current = current.next ?? ListNode(target)
-    }
-    
-    return head
 }
 
 let LL1 = ListNode(1, ListNode(4, ListNode(5)))
-append(head: nil, target: 1)
+arrayify(append(head: nil, target: 1, .iterative))
+arrayify(append(head: LL1, target: 7, .iterative))
+
+arrayify(append(head: nil, target: 1, .recursive))
+arrayify(append(head: LL1, target: 7, .recursive))
