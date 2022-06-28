@@ -31,8 +31,8 @@ func append(head: ListNode<Int>?, target: Int, _ type: ExecutionType) -> ListNod
 }
 
 let LL1 = ListNode(1, ListNode(4, ListNode(5)))
-arrayify(append(head: nil, target: 1, .iterative))
-arrayify(append(head: LL1, target: 7, .iterative))
+convertToArray(append(head: nil, target: 1, .iterative))
+convertToArray(append(head: LL1, target: 7, .iterative))
 
-arrayify(append(head: nil, target: 1, .recursive))
-arrayify(append(head: LL1, target: 7, .recursive))
+convertToArray(append(head: nil, target: 1, .recursive))
+convertToArray(append(head: LL1, target: 7, .recursive))
