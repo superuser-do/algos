@@ -11,7 +11,7 @@ def listToArray(head) -> [int]:
         ptr = ptr.next
     return array
 
-def arrayToList(values):
+def arrayToLinkedList(values):
    prev = None
    head = None
    for value in values:
@@ -22,3 +22,9 @@ def arrayToList(values):
         prev.next = current
     prev = current
    return head
+
+class TreeNode:
+    def __init__(self, value = 0, left = None, right = None):
+        self.value = value
+        self.left = left
+        self.right = right
