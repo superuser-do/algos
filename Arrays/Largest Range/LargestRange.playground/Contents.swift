@@ -9,7 +9,7 @@ func largestRange(array: [Int]) -> [Int] {
         seen[num] = false
     }
     
-    for num in array{
+    for num in array {
         var currentLength = 1
         var left = num - 1
         var right = num + 1
@@ -34,3 +34,4 @@ func largestRange(array: [Int]) -> [Int] {
 }
 
 largestRange(array: [2, 3, 4, 5, 6])
+largestRange(array: [4, 2, 1, 3])
