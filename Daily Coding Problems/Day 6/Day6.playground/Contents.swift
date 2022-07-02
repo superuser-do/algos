@@ -39,7 +39,7 @@ class XORLinkedList {
         guard let node = head else { return nil }
         var prevID = 0
         
-        for _ in stride(from: 0, to: index, by: 1) {
+        for _ in 0...index {
             let nextID = prevID ^ node.both!
             
             prevID = node.both!
