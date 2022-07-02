@@ -21,7 +21,7 @@ func day2(_ nums: [Int]) -> [Int] {
     suffixProducts = suffixProducts.reversed()
     
     var result = [Int]()
-    for i in stride(from: 0, to: nums.count, by: 1) {
+    for i in 0..<nums.count {
         if i == 0 {
             result.append(suffixProducts[i + 1])
         } else if i == nums.count - 1 {
