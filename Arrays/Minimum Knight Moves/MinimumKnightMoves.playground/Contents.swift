@@ -52,8 +52,6 @@ func minKnightMoves(_ x: Int, _ y: Int) -> Int {
             }
         }
     }
-
-    return -1
 }
 
 minKnightMoves(2, 1)
